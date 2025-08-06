@@ -1,5 +1,12 @@
 
-    * { margin:0; padding:0; box-sizing:border-box; }
+   .wrapper {
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+
+   * { margin:0; padding:0; box-sizing:border-box; }
     body {
       background: radial-gradient(circle at 25% 25%, rgba(10,132,255,0.015), transparent 10%),
     #000;
@@ -17,7 +24,7 @@
   padding: 1rem 0;
   text-align: center;
   z-index: 100;
-  box-shadow: 0 1px 10px rgba(10, 132, 255, 0.1);
+  box-shadow: 0 0.063rem 0.625rem rgba(10, 132, 255, 0.1);
 }nav a {
   position: relative;
   display: inline-block;
@@ -38,7 +45,7 @@ nav a::after {
   left: 50%;
   bottom: 0;
   width: 0%;
-  height: 2px;
+  height: 0.125rem;
   background: var(--dark-blue);
   transition: width 0.3s ease, left 0.3s ease;
 }
@@ -61,10 +68,10 @@ nav a:hover {
   font-size: 8vw;
   font-weight: 1000;
   color: white;
-  text-shadow: 0 0 20px rgba(10,132,255,0.2);
+  text-shadow: 0 0 1.25rem rgba(10,132,255,0.2);
   margin-bottom: 1rem;
   opacity: 0;
-  transform: translateY(30px);
+  transform: translateY(1.875rem);
   transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
     .hero h1.animate {
@@ -73,7 +80,7 @@ nav a:hover {
 }
     .hero p { font-size:1.4rem; color:#bbb; margin-bottom:3rem;}
     .down-arrow { font-size:2.2rem; color:var(--dark-blue); animation:bounce 2s infinite; }
-    @keyframes bounce { 0%,100% { transform: translateY(0);} 50% { transform: translateY(10px); } }
+    @keyframes bounce { 0%,100% { transform: translateY(0);} 50% { transform: translateY(0.625rem); } }
 
     /* shimmer through text */
     .shimmer-text {
@@ -100,21 +107,21 @@ nav a:hover {
 
     #about { display:flex; justify-content:center; align-items:flex-start; gap:3rem; flex-wrap:wrap; padding:6rem 2rem; background:linear-gradient(to bottom,rgba(10,132,255,0.03),transparent); }
  .about-photo img {
-  width: 300px;
+  width: 18.75rem;
   height: auto;
-  border-radius: 16px;
-  border: 3px solid silver;
+  border-radius: 1rem;
+  border: 0.188rem solid silver;
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-  box-shadow: 0 0 35px rgba(255, 255, 255, 0.25); /* silver glow */
+  box-shadow: 0 0 2.188rem rgba(255, 255, 255, 0.25); /* silver glow */
 }
 
 .about-photo img:hover {
   transform: scale(1.03);
-  box-shadow: 0 0 45px rgba(5, 169, 245, 0.55); /* blue glow */
+  box-shadow: 0 0 2.813rem rgba(5, 169, 245, 0.55); /* blue glow */
   border-color: #3282d1;
 }
 
-    .about-text { max-width:500px; color:#aaa; }
+    .about-text { max-width:31.25rem; color:#aaa; }
     .about-text h2 { color:white; font-size:2rem; margin-bottom:1rem; }
     .about-text p { line-height:1.6; }
 
@@ -122,31 +129,31 @@ nav a:hover {
     #projects { padding:6rem 2rem; background:linear-gradient(to bottom,rgba(10,132,255,0.02),transparent); text-align:center; }
     .project-grid {
       display:grid; grid-template-columns:repeat(3,1fr);
-      grid-template-rows:auto auto; gap:2rem; max-width:1000px; margin:0 auto;
+      grid-template-rows:auto auto; gap:2rem; max-width:62.5rem; margin:0 auto;
     }
    /* Layout for each card to match your visual mockup */
 .project-card {
   position: relative;
   background: #000;
-  border: 3px solid silver;
-  border-radius: 16px ;
+  border: 0.188rem solid silver;
+  border-radius: 1rem ;
   overflow: hidden;
-  width: 300px;
-  height: 300px;
+  width: 18.75rem;
+  height: 18.75rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
   padding-top: 1rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
- box-shadow: 0 0 35px rgba(255, 255, 255, 0.25);/* subtle silver glow */
+ box-shadow: 0 0 2.188rem rgba(255, 255, 255, 0.25);/* subtle silver glow */
 }
 
 /* Glow switch on hover */
 .project-card:hover {
   transform: scale(1.03);
- box-shadow: 0 0 45px rgba(5, 169, 245, 0.55);/* blue glow */
- border: 3px solid #3282d1;
+ box-shadow: 0 0 2.813rem rgba(5, 169, 245, 0.55);/* blue glow */
+ border: 0.188rem solid #3282d1;
  
 }
 
@@ -160,14 +167,14 @@ nav a:hover {
   transition: transform 0.3s ease, letter-spacing 0.3s ease;
 }
 .project-card:hover h3 {
-  transform: translateY(3px);
+  transform: translateY(0.188rem);
   letter-spacing: 0.03em;
 }
 
 /* Image grayscale by default, color on hover */
 .project-card img {
   width: auto;
-  height: 120px;
+  height: 7.5rem;
   max-width: 80%;
   object-fit: contain;
   filter: grayscale(100%) brightness(2.9) contrast(1.5);
@@ -177,7 +184,7 @@ nav a:hover {
 .project-card:hover img {
   filter: none;
   opacity: 1;
-  height: 130px;
+  height: 8.125rem;
   
 }
 
@@ -191,13 +198,13 @@ nav a:hover {
     }
     .modal.active { opacity:1; visibility:visible; }
     .modal-content {
-      background:#111; padding:2rem; border-radius:10px;
-      max-width:500px; max-height:80vh; overflow-y:auto;
-      color:#ccc; border:2px solid var(--dark-blue); position:relative;
+      background:#111; padding:2rem; border-radius:0.625rem;
+      max-width:31.25rem; max-height:80vh; overflow-y:auto;
+      color:#ccc; border:0.125rem solid var(--dark-blue); position:relative;
     }
     .modal-content h3 { color:var(--dark-blue); font-weight: bold; font-size: 30;}
     .modal-close {
-      position:absolute; top:10px; right:15px; font-size:1.5rem; color:silver; cursor:pointer;
+      position:absolute; top:0.625rem; right:150.938; font-size:1.5rem; color:silver; cursor:pointer;
     }
     .modal-close:hover { color:white; }
 	
@@ -208,9 +215,9 @@ nav a:hover {
   right: 1.5rem;
   top: 0;
   height: 100vh; /* Full viewport height from top */
-  width: 4px;
+  width: 0.25rem;
   background: #000;
-  border-radius: 999px;
+  border-radius: 62.438rem;
   z-index: 999;
   overflow: hidden;
 }
@@ -221,12 +228,12 @@ nav a:hover {
   height: 0%;
   background: var(--dark-blue);
   transition: height 0.2s ease-out;
-  border-radius: 999px;
+  border-radius: 62.438rem;
 }
 
 .fade-up {
   opacity: 0;
-  transform: translateY(100px);
+  transform: translateY(6.25rem);
   transition: opacity 1s ease, transform 1s ease;
 }
 
@@ -265,19 +272,19 @@ nav a:hover {
   scroll-behavior: smooth;
 }
 .extra-card {
-  flex: 0 0 250px;
+  flex: 0 0 15.625rem;
   background: #000;
-  border: 2px solid silver;
-  border-radius: 14px;
+  border: 0.125rem solid silver;
+  border-radius: 0.875rem;
   padding: 1rem;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 1.25rem rgba(255, 255, 255, 0.15);
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 .extra-card img {
   width: 100%;
-  height: 140px;
+  height: 8.75rem;
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: 0.5rem;
 }
 .extra-card h3 {
   color: silver;
@@ -292,8 +299,8 @@ nav a:hover {
 
 /* Hover effect */
 .extra-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 30px rgba(10,132,255,0.4);
+  transform: translateY(-0.313rem);
+  box-shadow: 0 0 1.875rem rgba(10,132,255,0.4);
   border-color: var(--dark-blue);
 }
 
@@ -313,7 +320,7 @@ nav a:hover {
   gap: 4rem;
   padding: 0 1rem;
   scroll-snap-type: y mandatory;
-  max-width: 1000px;
+  max-width: 62.5rem;
   margin: 0 auto;
 }
 
@@ -351,21 +358,21 @@ nav a:hover {
 }
 
 .extra-img img {
-  width: 220px;
+  width: 13.75rem;
   height: auto;
-  border-radius: 12px;
-  border: 2px solid silver;
+  border-radius: 0.75rem;
+  border: 0.125rem solid silver;
   transition: all 0.3s ease;
   box-shadow: none;
 }
 
 .extra-img img:hover {
   border-color: var(--dark-blue);
-  box-shadow: 0 0 25px rgba(10,132,255,0.45);
+  box-shadow: 0 0 1.563rem rgba(10,132,255,0.45);
   transform: scale(1.03);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 48rem) {
   .extra-block {
     flex-direction: column;
     text-align: center;
@@ -379,28 +386,28 @@ nav a:hover {
   gap: 2rem;
  
   align-items: flex-start;
-  max-width: 800px;   /* narrower than full width */
+  max-width: 50rem;   /* narrower than full width */
   margin: 0 auto;     /* horizontally centered */
 }
 .image-display {
-  width: 260px; /* slightly smaller */
+  width: 16.25rem; /* slightly smaller */
   flex-shrink: 0;
   position: sticky;
-  top: calc(110px + 2rem);
+  top: calc(6.875rem + 2rem);
 }
 .image-display img {
   width: 100%;
-  border-radius: 12px;
-  border: 2px solid silver;
+  border-radius: 0.75rem;
+  border: 0.125rem solid silver;
   transition: border-color 0.3s, box-shadow 0.3s;
 }
 .image-display img:hover {
   border-color: var(--dark-blue);
-  box-shadow: 0 0 25px rgba(10,132,255,0.45);
+  box-shadow: 0 0 1.563rem rgba(10,132,255,0.45);
 }
 
 .desc-scroll {
-  width: 400px; /* wider description area */
+  width: 25rem; /* wider description area */
   height: 45vh;
   overflow-y: auto;
   color: white;
@@ -438,11 +445,11 @@ nav a:hover {
 
 /* Scrollbar styling */
 .desc-scroll::-webkit-scrollbar {
-  width: 8px;
+  width: 0.5rem;
 }
 .desc-scroll::-webkit-scrollbar-thumb {
   background: var(--dark-blue);
-  border-radius: 4px;
+  border-radius: 0.25rem;
 }
 
 .award-carousel-container {
@@ -464,11 +471,11 @@ nav a:hover {
 }
 
 .award-card {
-  flex: 0 0 240px;      /* slightly wider */
-  height: 160px;   
+  flex: 0 0 15rem;      /* slightly wider */
+  height: 10rem;   
   background: #111;
-  border: 2px solid silver;
-  border-radius: 12px;
+  border: 0.125rem solid silver;
+  border-radius: 0.75rem;
   padding: 1rem;
   text-align: center;
   opacity: 0.6;
@@ -479,13 +486,13 @@ nav a:hover {
 .award-card.visible {
   opacity: 1;
   transform: scale(1);
-  box-shadow: 0 0 28px rgba(10,132,255,0.45);
+  box-shadow: 0 0 1.75rem rgba(10,132,255,0.45);
   border-color: var(--dark-blue);
 }
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   .award-carousel {
-    padding: 1rem calc(50vw - 150px); /* adjust based on half card width */
-    scroll-padding: 0 calc(50vw - 150px);
+    padding: 1rem calc(50vw - 9.375rem); /* adjust based on half card width */
+    scroll-padding: 0 calc(50vw - 9.375rem);
   }
 }
 .award-card h3 {
@@ -533,10 +540,10 @@ nav a:hover {
       position: fixed;
       top: 16.66%; /* Start at 1/6 from top */
       bottom: 16.66%; /* End at 1/6 from bottom */
-      right: 45px; /* Not sticking to far right */
-      width: 3px;
+      right: 2.813rem; /* Not sticking to far right */
+      width: 0.188rem;
       background: rgba(10,132,255, 0.1); /* optional light background */
-      border-radius: 50px;
+      border-radius: 3.125rem;
       z-index: 999;
     }
 
@@ -544,24 +551,24 @@ nav a:hover {
       width: 100%;
       background: rgba(10,132,255) ;
       height: 0%;
-      border-radius: 50px;
+      border-radius: 3.125rem;
     }
 
 .sidebar {
   position: fixed;
   top: 50%;
-  left: 20px;
+  left: 1.25rem;
   transform: translateY(-50%);
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 1.25rem;
   z-index: 1000;
 }
 
 /* Default: white icon using filter */
 .sidebar a img {
-  width: 30px;
-  height: 30px;
+  width: 1.875rem;
+  height:1.875rem;
   filter: brightness(0) invert(1); /* Turns icon white */
   transition: all 0.3s ease;
 }
@@ -570,7 +577,7 @@ nav a:hover {
 .sidebar a:hover img {
   filter: none;
   /* Add a soft blue glow preserving the image colors */
-  filter: drop-shadow(0 0 6px rgba(10,132,255));
+  filter: drop-shadow(0 0 0.375rem rgba(10,132,255));
 }
 
 .contact-section {
@@ -581,12 +588,12 @@ nav a:hover {
 
 .contact-card {
   margin: 0 auto;
-  max-width: 700px;
+  max-width: 43.75rem;
   background: #000;
-  border: 2px solid var(--dark-blue);
-  border-radius: 16px;
+  border: 0.125rem solid var(--dark-blue);
+  border-radius: 1rem;
   padding: 2rem;
-  box-shadow: 0 0 25px rgba(10,132,255,0.2);
+  box-shadow: 0 0 1.563rem rgba(10,132,255,0.2);
 }
 
 .contact-content {
@@ -608,8 +615,8 @@ nav a:hover {
   position: fixed;
   bottom: 2rem;
   left: 1rem;
-  width: 40px;
-  height: 40px;
+  width: 2.5rem;
+  height: 2.5rem;
   background-color: #222; /* dark gray */
   color: silver;
   border: none;
@@ -618,7 +625,7 @@ nav a:hover {
   font-weight: bold;
   cursor: pointer;
   z-index: 999;
-  box-shadow: 0 0 28px rgba(10,132,255,0.45);
+  box-shadow: 0 0 1.75rem rgba(10,132,255,0.45);
   border-color: var(--dark-blue);
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
