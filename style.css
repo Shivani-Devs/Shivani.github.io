@@ -635,3 +635,129 @@ nav a:hover {
   transform: scale(1.1);
 }
 
+/* Responsive tweaks for screens smaller than 768px (tablet and below) */
+@media (max-width: 48rem) {
+  #about {
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 1rem;
+  }
+  .about-photo img {
+    width: 12rem !important;
+  }
+  .about-text {
+    max-width: 100% !important;
+    padding: 0 1rem;
+  }
+  .project-grid {
+    grid-template-columns: repeat(1, 1fr);
+    max-width: 100% !important;
+    gap: 1.5rem;
+  }
+  .project-card {
+    width: 90vw !important;
+    height: auto !important;
+    padding: 1.5rem !important;
+  }
+  .extra-container {
+    flex-direction: column;
+    max-width: 100% !important;
+    padding: 0 1rem;
+  }
+  .image-display {
+    width: 100% !important;
+    position: static !important;
+    top: auto !important;
+    margin-bottom: 2rem;
+  }
+  .desc-scroll {
+    width: 100% !important;
+    height: auto !important;
+    max-height: 300px;
+    overflow-y: auto;
+  }
+  .award-carousel {
+    padding: 1rem 1rem !important;
+  }
+  .award-card {
+    flex: 0 0 80vw !important;
+    height: auto !important;
+  }
+  .sidebar {
+	display: none !important;
+}
+
+.extra-card img {
+	display: none !important;
+	
+}
+
+.extra-card {
+	display:  none !important;
+}
+
+.progress-container {
+	
+display: none !important;
+
+}
+
+.progress-bar {
+	display: none !important;
+}
+}
+
+/* Extra small screens (mobile) */
+@media (max-width: 30rem) {
+  nav a {
+    padding: 0.3rem 0.5rem;
+    font-size: 0.8rem;
+  }
+  .hero h1 {
+    font-size: 12vw !important;
+  }
+  .section-title {
+    font-size: 2rem !important;
+  }
+  
+  .sidebar {
+	display: none !important;
+}
+
+.extra-card img {
+	display: none !important;
+	
+}
+
+.extra-card {
+	display: none !important;
+}
+
+.progress-container {
+	
+display: none !important;
+
+}
+
+.progress-bar {
+	display: none !important;
+}
+
+.award-arrow {
+	display: none !important;
+}
+
+.contact-content {
+  font-size: 0.7 rem !important;
+  
+}
+
+.project-card {
+  
+  width: 80% !important;
+  align: center !important ;
+  
+}
+
+
+}
