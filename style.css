@@ -761,3 +761,29 @@ display: none !important;
 
 
 }
+
+
+/* Apply shimmer effect on hover for section titles */
+.section-title span {
+  display: inline-block;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.section-title:hover span {
+  background: linear-gradient(
+    90deg,
+    silver 0%,
+    silver 40%,
+    var(--dark-blue) 50%,
+    silver 60%,
+    silver 100%
+  );
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer-pass 2.5s linear infinite;
+}
+
